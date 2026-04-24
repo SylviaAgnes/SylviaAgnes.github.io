@@ -89,6 +89,21 @@
       padding: 100px 24px 72px;
       position: relative;
       overflow: hidden;
+      background-image: url('../FOTOS/Fotos_DIVERS/2.png');
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(20, 28, 15, 0.72);
+      z-index: 0;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
     }
 
     .hero::before {
@@ -171,20 +186,6 @@
       max-width: 520px;
       margin: 0 auto 32px;
       line-height: 1.85;
-    }
-
-    .hero-image-wrap {
-      width: 100%;
-      max-width: 560px;
-      margin: 0 auto 40px;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-    .hero-image-wrap img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-      opacity: 0.9;
     }
 
     .hero-leitsatz {
@@ -1065,10 +1066,6 @@
       Du bist nicht erschöpft, weil Du zu schwach bist.<br>
       Du kennst Deine weibliche Urkraft noch nicht.
     </p>
-
-    <div class="hero-image-wrap">
-      <img src="../FOTOS/Fotos_DIVERS/2.png" alt="Erstrahlen statt Erschöpfen · TAMARÁ">
-    </div>
 
     <div class="hero-date-box">
       <div class="hero-date-item">
