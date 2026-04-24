@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Du bist dabei · Erstrahlen statt Erschöpfen · TAMARÁ</title>
+  <meta name="description" content="Du hast Ja gesagt. Wir freuen uns auf Dich am 5. Mai 2026, 19 Uhr.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark:        #1D2414;
+      --dark-2:      #252e1a;
+      --dark-3:      #2f3b22;
+      --sage:        #414d3f;
+      --sage-light:  #7a9175;
+      --gold:        #ccb583;
+      --gold-light:  #ddc99a;
+      --gold-pale:   #eeddb5;
+      --cream:       #f2eee8;
+      --cream-2:     #e8e2d8;
+      --warm-gray:   #c8c4bc;
+      --coral:       #e8b4a0;
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body:    'Montserrat', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--dark);
+      color: var(--cream);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(29, 36, 20, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(204, 181, 131, 0.15);
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-brand {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 5px;
+      color: var(--gold);
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px 72px;
+      position: relative;
+      overflow: hidden;
+      background-image: url('../FOTOS/Fotos_DIVERS/2.png');
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(20, 28, 15, 0.72);
+      z-index: 0;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.5;
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(44px, 8vw, 80px);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      color: var(--cream);
+      margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-sub {
+      font-family: var(--font-body);
+      font-size: 17px;
+      font-weight: 300;
+      color: var(--cream);
+      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .hero-date-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(204, 181, 131, 0.15);
+      border: 1px solid rgba(204, 181, 131, 0.4);
+      border-radius: 2px;
+      padding: 12px 28px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 40px;
+    }
+    .hero-date-pill .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0.7;
+    }
+
+    .hero-checkmark {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: rgba(204, 181, 131, 0.15);
+      border: 1.5px solid rgba(204, 181, 131, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 32px;
+      font-size: 28px;
+    }
+
+    /* ── SECTIONS ALLGEMEIN ── */
+    section {
+      padding: 80px 24px;
+    }
+    .section-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(204, 181, 131, 0.25);
+    }
+
+    /* ── WAS JETZT PASSIERT ── */
+    .steps {
+      background: var(--dark-2);
+      border-top: 1px solid rgba(204, 181, 131, 0.12);
+      border-bottom: 1px solid rgba(204, 181, 131, 0.12);
+    }
+
+    .steps-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .steps-heading em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .steps-sub {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--warm-gray);
+      margin-bottom: 48px;
+      max-width: 520px;
+    }
+
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 28px;
+      align-items: flex-start;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(204, 181, 131, 0.1);
+    }
+    .step-item:last-child { border-bottom: none; }
+
+    .step-num {
+      font-family: var(--font-heading);
+      font-size: 42px;
+      font-weight: 400;
+      color: rgba(204, 181, 131, 0.2);
+      line-height: 1;
+      min-width: 44px;
+      margin-top: -4px;
+    }
+
+    .step-content {}
+    .step-title {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+    .step-text {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.7;
+    }
+    .step-text strong {
+      color: var(--gold-light);
+      font-weight: 500;
+    }
+
+    /* ── KALENDER ── */
+    .kalender {
+      background: var(--dark-3);
+      text-align: center;
+    }
+
+    .kalender-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .kalender-heading em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .kalender-text {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--warm-gray);
+      max-width: 540px;
+      margin: 0 auto 40px;
+      line-height: 1.85;
+    }
+    .kalender-text strong {
+      color: var(--cream);
+      font-weight: 500;
+    }
+
+    .kalender-buttons {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-kalender {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 26px;
+      border-radius: 2px;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-kalender-google {
+      background: var(--gold);
+      color: var(--dark);
+    }
+    .btn-kalender-google:hover {
+      background: var(--gold-light);
+    }
+    .btn-kalender-ical {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid rgba(204, 181, 131, 0.5);
+    }
+    .btn-kalender-ical:hover {
+      border-color: var(--gold);
+      background: rgba(204, 181, 131, 0.06);
+    }
+
+    .kalender-note {
+      margin-top: 20px;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(200, 196, 188, 0.5);
+      letter-spacing: 0.5px;
+    }
+
+    /* ── READING BRIDGE ── */
+    .reading {
+      background: var(--dark-2);
+      text-align: center;
+      border-top: 1px solid rgba(204, 181, 131, 0.1);
+    }
+
+    .reading-eyebrow {
+      font-family: var(--font-body);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 20px;
+    }
+
+    .reading-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 18px;
+      line-height: 1.25;
+    }
+    .reading-heading em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .reading-text {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--warm-gray);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.85;
+    }
+    .reading-text strong {
+      color: var(--cream);
+      font-weight: 500;
+    }
+
+    .btn-reading {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--dark);
+      background: var(--coral);
+      padding: 15px 36px;
+      border-radius: 2px;
+      transition: background 0.2s;
+    }
+    .btn-reading:hover {
+      background: #efbfad;
+    }
+
+    .reading-fine {
+      margin-top: 16px;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 300;
+      color: rgba(200, 196, 188, 0.5);
+    }
+
+    /* ── SOCIAL MEDIA ── */
+    .social {
+      background: var(--dark);
+      text-align: center;
+      border-top: 1px solid rgba(204, 181, 131, 0.1);
+    }
+
+    .social-heading {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .social-heading em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .social-text {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--warm-gray);
+      max-width: 480px;
+      margin: 0 auto 36px;
+      line-height: 1.8;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-social {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--cream);
+      background: transparent;
+      border: 1px solid rgba(204, 181, 131, 0.35);
+      padding: 13px 24px;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .btn-social:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+      background: rgba(204, 181, 131, 0.06);
+    }
+    .btn-social svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ── CLOSING / REMEMBER YOUR POWER ── */
+    .closing {
+      background: var(--dark-2);
+      text-align: center;
+      padding: 100px 24px;
+      border-top: 1px solid rgba(204, 181, 131, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+    .closing::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(204, 181, 131, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .closing-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .closing-ornament {
+      font-family: var(--font-heading);
+      font-size: 48px;
+      color: rgba(204, 181, 131, 0.25);
+      line-height: 1;
+      margin-bottom: 28px;
+    }
+
+    .closing-text {
+      font-family: var(--font-heading);
+      font-size: clamp(18px, 2.5vw, 24px);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--warm-gray);
+      line-height: 1.7;
+      margin-bottom: 48px;
+    }
+
+    .closing-claim {
+      font-family: var(--font-body);
+      font-size: clamp(18px, 4vw, 26px);
+      font-weight: 700;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+    }
+
+    .closing-signature {
+      font-family: var(--font-heading);
+      font-size: 22px;
+      font-style: italic;
+      color: var(--cream);
+      opacity: 0.7;
+    }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: var(--dark);
+      border-top: 1px solid rgba(204, 181, 131, 0.1);
+      padding: 28px 32px;
+      text-align: center;
+    }
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-brand {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 4px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-links a {
+      font-family: var(--font-body);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+      text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+    .footer-links a:hover { opacity: 1; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .site-header { padding: 14px 20px; }
+      section { padding: 64px 20px; }
+      .hero { padding: 72px 20px 60px; }
+      .kalender-buttons { flex-direction: column; align-items: center; }
+      .btn-kalender { width: 100%; justify-content: center; max-width: 300px; }
+      .social-links { flex-direction: column; align-items: center; }
+      .btn-social { width: 100%; justify-content: center; max-width: 280px; }
+      .step-item { flex-direction: column; gap: 8px; }
+      .step-num { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <a href="#" class="header-brand">TAMARÁ</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-checkmark">✓</div>
+
+    <div class="hero-eyebrow">Du bist dabei</div>
+
+    <h1>Du hast Ja gesagt –<br><em>zu Dir.</em></h1>
+
+    <p class="hero-sub">
+      Diese Entscheidung gehört Dir. Und wir freuen uns so sehr,<br>
+      dass Du am 5. Mai dabei bist.
+    </p>
+
+    <div class="hero-date-pill">
+      <span>5. Mai 2026</span>
+      <span class="dot"></span>
+      <span>19 Uhr</span>
+      <span class="dot"></span>
+      <span>via Zoom</span>
+    </div>
+  </div>
+</section>
+
+<!-- WAS JETZT PASSIERT -->
+<section class="steps">
+  <div class="section-inner">
+    <div class="section-label">Was jetzt passiert</div>
+    <h2 class="steps-heading">Alles, was Du<br>wissen <em>möchtest.</em></h2>
+    <p class="steps-sub">Damit Du entspannt bis zum 5. Mai sein kannst.</p>
+
+    <div class="steps-list">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Bestätigungs-E-Mail</div>
+          <div class="step-text">
+            Du bekommst gleich eine <strong>Bestätigungs-E-Mail</strong> von uns – bitte prüfe auch Deinen Spam-Ordner, falls sie nicht sofort ankommt.
+          </div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Zoom-Einwahl-Link</div>
+          <div class="step-text">
+            <strong>24 Stunden vor dem Webinar</strong> erhältst Du eine Erinnerungsmail mit dem Zoom-Link – halte Dein Postfach im Auge.
+          </div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Live dabei sein</div>
+          <div class="step-text">
+            Das Webinar findet <strong>nur live</strong> statt – und genau da passiert die Magie. Wer live dabei ist, hat außerdem die Chance auf ein <strong>persönliches EnergyReading mit Sylvia</strong>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KALENDER -->
+<section class="kalender">
+  <div class="section-inner">
+    <div class="section-label">Nicht vergessen</div>
+    <h2 class="kalender-heading">Sichere Dir<br>diesen <em>besonderen Abend.</em></h2>
+
+    <p class="kalender-text">
+      Trage Dir diesen besonderen Termin für einen unvergleichlichen Abend direkt in Deinen Kalender ein. Um live dabei zu sein und die Chance auf ein <strong>EnergyReading</strong> nicht zu verpassen – am besten jetzt gleich.
+    </p>
+
+    <div class="kalender-buttons">
+      <a
+        href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Erstrahlen+statt+Ersch%C3%B6pfen+%E2%80%93+Webinar+mit+TAMAR%C3%81&dates=20260505T170000Z%2F20260505T183000Z&details=Kostenfrei+via+Zoom+%7C+TAMAR%C3%81+mit+Sylvia+A.+Wenniges+%7C+Zoom-Link+kommt+per+E-Mail&location=Zoom+(Link+kommt+per+E-Mail)"
+        target="_blank"
+        rel="noopener"
+        class="btn-kalender btn-kalender-google"
+      >
+        &#128197; In Google Kalender eintragen
+      </a>
+      <button
+        onclick="downloadICS()"
+        class="btn-kalender btn-kalender-ical"
+      >
+        &#128197; Apple / Outlook Kalender (.ics)
+      </button>
+    </div>
+
+    <p class="kalender-note">5. Mai 2026 · 19:00–20:30 Uhr MESZ · via Zoom</p>
+  </div>
+</section>
+
+<!-- READING BRIDGE -->
+<section class="reading">
+  <div class="section-inner">
+    <div class="reading-eyebrow">Exklusiv vor dem Webinar</div>
+    <h2 class="reading-heading">Möchtest Du <em>noch tiefer gehen?</em></h2>
+    <p class="reading-text">
+      Wenn Du ganz schnell bist, kannst Du Dir auch schon <strong>vor dem Webinar</strong> „Erstrahlen statt Erschöpfen" ein persönliches <strong>Reading mit mir</strong> sichern. Plätze sind begrenzt.
+    </p>
+    <a
+      href="https://calendly.com/tamara-home/get-in-touch-call"
+      target="_blank"
+      rel="noopener"
+      class="btn-reading"
+    >
+      Jetzt persönliches Reading sichern →
+    </a>
+    <p class="reading-fine">Unverbindliches Erstgespräch · Kostenlos</p>
+  </div>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section class="social">
+  <div class="section-inner">
+    <div class="section-label">Bleib in Verbindung</div>
+    <h2 class="social-heading">Folge mir für<br>tägliche <em>Impulse.</em></h2>
+    <p class="social-text">
+      Bis zum 5. Mai – und danach – findest Du mich auf Instagram &amp; Co. Tägliche Impulse für Deine Frequenz, Deine Kraft und Dein Strahlen.
+    </p>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/sylvia.agnes.wenniges/" target="_blank" rel="noopener" class="btn-social">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+        </svg>
+        Instagram
+      </a>
+      <a href="https://www.facebook.com/Sylvia.Agnes.Wenniges" target="_blank" rel="noopener" class="btn-social">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+        Facebook
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING: REMEMBER YOUR POWER -->
+<section class="closing">
+  <div class="closing-inner">
+    <div class="closing-ornament">✦</div>
+
+    <p class="closing-text">
+      Du bist nicht hier, um zu funktionieren.<br>
+      Du bist hier, um zu strahlen.<br>
+      Und Du erinnerst Dich gerade daran.
+    </p>
+
+    <div class="closing-claim">Remember Your Power</div>
+
+    <div class="closing-signature">
+      Bis zum 5. Mai – ich freue mich auf Dich,<br>
+      Sylvia
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">TAMARÁ</div>
+    <div class="footer-links">
+      <!-- PLATZHALTER: Füge Deine echten Links ein -->
+      <a href="#impressum">Impressum</a>
+      <a href="#datenschutz">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ICS DOWNLOAD SCRIPT -->
+<script>
+function downloadICS() {
+  var icsContent = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//TAMARÀ//Webinar//DE',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+    'BEGIN:VEVENT',
+    'UID:erstrahlen-statt-erschoepfen-webinar-2026@tamara',
+    'DTSTART:20260505T170000Z',
+    'DTEND:20260505T183000Z',
+    'SUMMARY:Erstrahlen statt Erschöpfen – Webinar mit TAMARÁ',
+    'DESCRIPTION:Kostenfrei via Zoom | Sylvia A. Wenniges | Zoom-Link kommt per E-Mail',
+    'LOCATION:Zoom (Link kommt per E-Mail)',
+    'STATUS:CONFIRMED',
+    'TRANSP:OPAQUE',
+    'END:VEVENT',
+    'END:VCALENDAR'
+  ].join('\r\n');
+
+  var blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+  var link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'erstrahlen-statt-erschoepfen-webinar.ics';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(link.href);
+}
+</script>
+
+</body>
+</html>
